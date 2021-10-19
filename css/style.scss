@@ -1,0 +1,207 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background-color: rgb(241, 241, 241);
+    --text-color: black;
+    --text-color-hover-or-lighter: rgb(73, 73, 73);
+    --purple-color: rgb(122, 13, 122);
+}
+
+body{
+    font-family: 'Mukta', sans-serif;
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+.header{
+    width: 94vw;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background-color);
+
+    .logo{
+        font-weight: 300;
+        color: black;
+        font-size: 24px;
+        transition: 0.3s ease-in-out;
+        grid-column: 2 / 6;
+        grid-row: 3 / 5;
+
+        &:hover{
+            cursor: pointer;
+            letter-spacing: 3px;
+            font-weight: 350;
+            text-decoration: underline;
+        }
+    }
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    width: 100vw;
+    
+    .grid{
+        background-color: var(--background-color);
+        max-width: 100%;
+        height: 100vh;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        
+    }
+
+
+    h1{
+        color: var(--background-color);
+        width: 80vh;
+        font-size: 252px;
+        font-weight: bold;
+        text-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+        letter-spacing: 10px;
+        font-style: italic;
+        z-index: 1;
+        grid-column: 2 / 10;
+        grid-row: 1 / 3 ;
+    }
+
+    img{
+        z-index: 2;
+        grid-column: 6 / 11;
+        grid-row: 1 / 6;
+        width: 100vh;
+        margin-right: 1%;
+    }
+
+    lord-icon.scrollGIF{
+        position: absolute;
+        top: 82vh;
+        left: 42vw;
+        z-index: 2;
+        transform: scale(0.2) rotate(180deg);
+    }
+
+    .introducingMyself{
+        text-align: left;
+        z-index: 3;
+        grid-column: 2 / 6;
+        grid-row: 3 / 5;
+        margin-left: 5%;
+        width: 60ch;
+        .name{
+            font-weight: 100;
+            color: var(--text-color);
+            font-size: 24px;
+            letter-spacing: 7px;
+            transition: 0.5s ease-in-out;
+            grid-column: 2 / 6;
+            grid-row: 3 / 5;
+
+            &:hover{
+                cursor: pointer;
+                letter-spacing: 15px;
+            }
+            
+        }
+
+        .status{
+            font-weight: bold;
+            color: var(--text-color);
+            font-size: 54px;
+            line-height: 58px;
+            transition-delay: 0.3s;
+            transition: 0.2s ease;
+            grid-column: 2 / 6;
+            grid-row: 3 / 5;
+            width: 18ch;
+
+            &:hover{
+                cursor: pointer;
+                color: var(--text-color-hover-or-lighter);
+            }
+        }
+
+        .shortIntro{
+            margin-top: 40px;
+            font-weight: 400;
+            color: var(--text-color-hover-or-lighter);
+            font-size: 26px;
+            width: 40ch;
+            transition: 0.1s ease;
+            grid-column: 2 / 6;
+            grid-row: 3 / 5;
+
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+
+.aboutMe{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30vh;
+
+    .presentation{
+        margin-top: 10vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .paragraph1{
+        font-weight: 400;
+        font-size: 26px;
+        letter-spacing: 10px;
+        color: var(--text-color-hover-or-lighter);
+        margin-bottom: 2vh;
+        width: 40vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        .el1, .el2, .el3, .el4, .el5{
+            width: auto;
+            &:hover{
+                color: var(--purple-color);
+                font-weight: bold;
+                cursor: pointer;
+            }
+        }
+        
+    }
+    .paragraph2{
+        font-weight: 650;
+        font-size: 48px;
+        line-height: 56px;
+        width: 65vw;
+        text-align: center;
+    }
+    .paragraph3{
+        margin-top: 15px;
+        font-weight: 400;
+        color: var(--text-color-hover-or-lighter);
+        font-size: 26px;
+        width: 80ch;
+    }
+}
