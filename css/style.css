@@ -36,6 +36,7 @@ body {
   transition: 0.3s ease-in-out;
   grid-column: 2/6;
   grid-row: 3/5;
+  z-index: 3;
 }
 .header .logo:hover {
   cursor: pointer;
@@ -65,14 +66,15 @@ header .grid {
 header h1 {
   color: var(--background-color);
   width: 80vh;
-  font-size: 252px;
+  font-size: 400px;
   font-weight: bold;
   text-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
   letter-spacing: 10px;
   font-style: italic;
+  line-height: 200px;
   z-index: 1;
-  grid-column: 2/10;
-  grid-row: 1/3;
+  grid-column: 1/10;
+  grid-row: 1/4;
 }
 header img {
   z-index: 2;
@@ -80,6 +82,12 @@ header img {
   grid-row: 1/6;
   width: 100vh;
   margin-right: 1%;
+  filter: grayscale(0.3);
+  transition: 0.3s ease-in-out;
+}
+header img:hover {
+  filter: grayscale(0);
+  transform: scale(1.1);
 }
 header lord-icon.scrollGIF {
   position: absolute;
@@ -107,7 +115,6 @@ header .introducingMyself .name {
 }
 header .introducingMyself .name:hover {
   cursor: pointer;
-  letter-spacing: 15px;
 }
 header .introducingMyself .status {
   font-weight: bold;
@@ -137,23 +144,42 @@ header .introducingMyself .shortIntro {
 header .introducingMyself .shortIntro:hover {
   cursor: pointer;
 }
+header .introducingMyself .projectsOrAbout {
+  margin-top: 20px;
+  font-weight: 700;
+  font-size: 26px;
+}
+header .introducingMyself .projectsOrAbout a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+header .introducingMyself .projectsOrAbout a:hover {
+  text-decoration: underline;
+}
 
 .aboutMe {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   margin-top: 30vh;
+  text-align: center;
 }
-.aboutMe .presentation {
-  margin-top: 10vh;
+.aboutMe .presentation, .aboutMe .title2 {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-.aboutMe .paragraph1 {
+.aboutMe .presentation {
+  margin-top: 10vh;
+}
+.aboutMe .title2 {
+  margin-top: 30vh;
+}
+.aboutMe .paragraph1, .aboutMe .paragraphExperiences {
   font-weight: 400;
   font-size: 26px;
   letter-spacing: 10px;
@@ -164,27 +190,237 @@ header .introducingMyself .shortIntro:hover {
   flex-direction: row;
   justify-content: space-around;
 }
-.aboutMe .paragraph1 .el1, .aboutMe .paragraph1 .el2, .aboutMe .paragraph1 .el3, .aboutMe .paragraph1 .el4, .aboutMe .paragraph1 .el5 {
+.aboutMe .paragraph1 .el1, .aboutMe .paragraph1 .el2, .aboutMe .paragraph1 .el3, .aboutMe .paragraph1 .el4, .aboutMe .paragraph1 .el5, .aboutMe .paragraphExperiences .el1, .aboutMe .paragraphExperiences .el2, .aboutMe .paragraphExperiences .el3, .aboutMe .paragraphExperiences .el4, .aboutMe .paragraphExperiences .el5 {
   width: auto;
 }
-.aboutMe .paragraph1 .el1:hover, .aboutMe .paragraph1 .el2:hover, .aboutMe .paragraph1 .el3:hover, .aboutMe .paragraph1 .el4:hover, .aboutMe .paragraph1 .el5:hover {
+.aboutMe .paragraph1 .el1:hover, .aboutMe .paragraph1 .el2:hover, .aboutMe .paragraph1 .el3:hover, .aboutMe .paragraph1 .el4:hover, .aboutMe .paragraph1 .el5:hover, .aboutMe .paragraphExperiences .el1:hover, .aboutMe .paragraphExperiences .el2:hover, .aboutMe .paragraphExperiences .el3:hover, .aboutMe .paragraphExperiences .el4:hover, .aboutMe .paragraphExperiences .el5:hover {
   color: var(--purple-color);
   font-weight: bold;
   cursor: pointer;
+  text-decoration: underline;
+}
+.aboutMe .paragraphExperiences {
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: 10px;
+  color: var(--text-color);
+  margin-bottom: -6vh;
+  margin-top: 15vh;
+  width: 20vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.aboutMe .paragraphExperiences .el1, .aboutMe .paragraphExperiences .el2, .aboutMe .paragraphExperiences .el3, .aboutMe .paragraphExperiences .el4, .aboutMe .paragraphExperiences .el5 {
+  width: auto;
+}
+.aboutMe .paragraphExperiences .el1:hover, .aboutMe .paragraphExperiences .el2:hover, .aboutMe .paragraphExperiences .el3:hover, .aboutMe .paragraphExperiences .el4:hover, .aboutMe .paragraphExperiences .el5:hover {
+  color: var(--purple-color);
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: underline;
 }
 .aboutMe .paragraph2 {
   font-weight: 650;
   font-size: 48px;
   line-height: 56px;
   width: 65vw;
-  text-align: center;
 }
 .aboutMe .paragraph3 {
-  margin-top: 15px;
+  margin-top: 70px;
   font-weight: 400;
   color: var(--text-color-hover-or-lighter);
+  font-size: 22px;
+  width: 60vw;
+  letter-spacing: -1px;
+}
+.aboutMe .paragraph3 a {
+  font-weight: 600;
+  color: var(--text-color);
+  text-decoration: none;
+}
+.aboutMe .paragraph3 a:hover {
+  text-decoration: underline;
+}
+.aboutMe .gridAboutMe {
+  margin-top: 30px;
+  max-width: 100vw;
+  height: 150vh;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+  row-gap: 10px;
+  column-gap: 10px;
+  object-fit: cover;
+  grid-auto-flow: dense;
+}
+.aboutMe .gridAboutMe .pic {
+  filter: grayscale(0.5) opacity(0.8);
+  transition: 0.2s all ease-in-out;
+}
+.aboutMe .gridAboutMe .pic:hover {
+  filter: grayscale(0) opacity(1);
+  cursor: pointer;
+  background-size: 175%;
+  background-repeat: no-repeat;
+  background-color: rgba(83, 78, 83, 0.6);
+}
+.aboutMe .gridAboutMe .pic1 {
+  width: 30vw;
+  grid-column: 2/3;
+  grid-row: 1/3;
+  background-image: url(../images/imageOfMe1.JPG);
+  background-position: center;
+  background-size: 250%;
+}
+.aboutMe .gridAboutMe .pic2 {
+  width: 30vw;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  background-image: url(../images/imageOfMe2.RAF);
+  background-size: 10vw;
+}
+.aboutMe .gridAboutMe .pic3 {
+  width: 30vw;
+  grid-column: 1/2;
+  grid-row: 2/4;
+  background-image: url(../images/imageOfMe3.JPG);
+  background-position: center;
+  background-size: 90vw;
+}
+.aboutMe .gridAboutMe .pic4 {
+  width: 61vw;
+  grid-column: 2/4;
+  grid-row: 3/4;
+  background-image: url(../images/imageOfMe4.JPG);
+  background-position: center;
+  background-size: 50vw;
+}
+.aboutMe .gridAboutMe .pic5 {
+  width: 30vw;
+  grid-column: 3/4;
+  grid-row: 1/2;
+  background-image: url(../images/imageOfMe5.JPG);
+  background-position: center;
+  background-size: 50vw;
+}
+.aboutMe .gridAboutMe .pic6 {
+  width: 30vw;
+  grid-column: 3/4;
+  grid-row: 2/3;
+  background-image: url(../images/imageOfMe6.JPG);
+  background-position: center;
+  background-size: 45vw;
+}
+.aboutMe .gridAboutMe .pic7 {
+  width: 30vw;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  background-image: url(../images/imageOfMe7.jpg);
+  background-position: center;
+  background-size: 45vw;
+}
+.aboutMe iframe {
+  width: 91.5vw;
+  height: 20vw;
+  margin-top: 10px;
+}
+
+.skills {
+  margin-top: 30vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+.skills .skillsHeading {
+  width: 90vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 5vh;
+  margin-right: 7%;
+}
+.skills .skillsHeading .toolsName, .skills .skillsHeading .languagesName {
+  font-weight: 400;
   font-size: 26px;
-  width: 80ch;
+  letter-spacing: 10px;
+  color: var(--text-color);
+  margin-bottom: 2vh;
+}
+.skills .skillsHeading .toolsName:hover, .skills .skillsHeading .languagesName:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
+.skills .infoIcon {
+  width: 90vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.skills .devLanguages {
+  margin-top: 5%;
+}
+.skills .devLanguages .gridLanguages {
+  max-width: 35vw;
+  height: 35vh;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto;
+  grid-template-rows: auto auto auto auto auto auto auto auto auto;
+  row-gap: 20px;
+  column-gap: 20px;
+  object-fit: cover;
+  grid-auto-flow: dense;
+}
+.skills .devLanguages .gridLanguages:hover {
+  border: 2px solid black;
+}
+.skills .devLanguages .gridLanguages img {
+  width: 5vw;
+  height: 5vw;
+}
+.skills .devLanguages .gridLanguages :nth-child(1) {
+  grid-column: 4/5;
+  grid-row: 1/2;
+}
+.skills .devLanguages .gridLanguages :nth-child(2) {
+  grid-column: 5/6;
+  grid-row: 1/2;
+}
+.skills .devLanguages .gridLanguages :nth-child(3) {
+  grid-column: 3/4;
+  grid-row: 2/3;
+}
+.skills .devLanguages .gridLanguages :nth-child(4) {
+  grid-column: 5;
+  grid-row: 2/3;
+}
+.skills .devLanguages .gridLanguages :nth-child(5) {
+  grid-column: 6/7;
+  grid-row: 2/3;
+}
+.skills .devLanguages .gridLanguages :nth-child(6) {
+  grid-column: 4/5;
+  grid-row: 3/4;
+}
+.skills .devLanguages .gridLanguages :nth-child(7) {
+  grid-column: 5/6;
+  grid-row: 3/4;
+}
+.skills .devLanguages .gridLanguages :nth-child(8) {
+  grid-column: 4/5;
+  grid-row: 2/3;
+  transform: scale(0.9);
+}
+.skills .tools p {
+  margin-top: 70px;
+  font-weight: 200;
+  color: var(--text-color-hover-or-lighter);
+  font-size: 26px;
+  width: 22vw;
+  letter-spacing: -1px;
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */
