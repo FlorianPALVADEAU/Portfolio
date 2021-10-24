@@ -1,4 +1,18 @@
-    new Glide('.glide').mount()
+$(window).on("load", function () {
+    $(".loader-wrapper").fadeOut("slow");
+});
+
+const menuicon = document.querySelector('.hamburger-menu');
+const navbar = document.querySelector(".navbar");
+
+menuicon.addEventListener("click", () => {
+    navbar.classList.toggle("change");
+    console.log('ez')
+});
+    
+    
+    
+    new Glide('.glide').mount();
 
 
     mapboxgl.accessToken = 'pk.eyJ1IjoiZmxvcGx2ZCIsImEiOiJja3Y0eWN0ZTgxMTBmMnZzMzk5b3piNHI1In0.oT3Wlk6SQ7B-mKHV61VMGQ';
@@ -58,5 +72,26 @@
     });
 
 
-    
+
+
+mybutton = document.querySelector(".boutonScrollTop");
+mybutton.classList.add('noDisplay');
+
+window.onscroll = function() {scrollFunction()};
+
+
+function scrollFunction() {
+  if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
+    mybutton.classList.remove('noDisplay');
+  } else {
+    mybutton.classList.add('noDisplay');
+  }
+}
+function topFunction() {
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth",
+    })
+}
 

@@ -6,18 +6,51 @@
     <link href="https://fonts.googleapis.com/css2?family=Festive&family=Mukta:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.css' rel='stylesheet'>
-    <script src="js/script.js" defer></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide" defer></script>
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.js'></script>
+    <script src="js/script.js" defer></script>
+    
+
+
+    
+
     
     <title>Mon PortFolio</title>
 </head>
 <body>
+    <div class="loader-wrapper">
+        <span class="loader">
+            <div class="loaderimg"></div>
+        </span>
+    </div>
     <section class="container">
+        <button class="boutonScrollTop" onclick="topFunction()"><img src="images/arrowUp.png" alt="arrow button"></button>
         <div class="header">
             <div class="logo">Florian PALVADEAU</div>
-            <div class="menu">menu</div>
+
+            
+            <nav class="navbar">
+                <label for="check">
+                <div class="hamburger-menu">
+                    <div class="line line-1"></div>
+                    <div class="line line-2"></div>
+                    <div class="line line-3"></div>
+                </div>
+
+                <ul class="lien">
+                    <li><a href="#home"><b>Home</b></a></li>
+                    <li><a href="#aboutMe"><b>About Me</b></a></li>
+                    <li><a href="#skills"><b>Skills</b></a></li>
+                    <li><a href="#projects"><b>Projects</b></a></li>
+                    <li><a href="#contact"><b>Contact</b></a></li>
+            
+                </ul>
+            </nav>
+            
+
         </div>
-        <header>
+        <header id='home'>
             <div class="grid">
                 <h1>developer.</h1>
                 <img src="images/photoMec.png" alt="Profile Picture of Florian PALVADEAU">
@@ -66,7 +99,7 @@
             </p>
             <div class="paragraphExperiences">
                 <p class="el1">MY</p>
-                <p class="el2"> PERSONNAL </p>
+                <p class="el2">PERSONNAL </p>
                 <p class="el2">HOBBIES</p>
             </div>
             <p class="paragraph3">I really enjoy being out with my friends, or my family. Moreover, i am very sporty : i'm doing DownHill bike with some friends of mine, but also going 3 to 5 times a week to the gym. Sports are a real passion for me, as well as web-development.</p>
@@ -117,7 +150,7 @@
             <div class="skillsHeading">
 
                 <p class="languagesName">DEVELOPPING LANGUAGES I USE</p>
-                <p class="toolsName">TOOL I USE</p>
+                <p class="toolsName">TOOLS I USE</p>
             
 
             </div>
@@ -170,7 +203,7 @@
 
                         <li class="glide__slide"><div id="container2" class="containers">
                             <iframe src="https://www.youtube.com/embed/YQ3bTsKf0cU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            <p>A Tour Eiffel website with a working blog and administration system</p>
+                            <p>A Tour Eiffel website with a working blog with it's administration system</p>
                             <p>What was the project idea ?</p>
                             <p>This project was imposed to be done by my school if i wanna pursue my studies in the web-development axis. We had to make a full website with at least : a parallax animation, a live-error formulary, a working blog(with a wysiwyg interface, and a fully secured administration system), a gallery with filter and masonry effect, some comments under it with an anti-swearing, ... 
                             This project was very formative, it allowed me to work by myself even if i didn't know how to do or anything, i learnt to study and search all by my side.
@@ -209,7 +242,7 @@
 
         </section>
 
-        <section class="contact">
+        <section class="contact" id="contact">
             <h6 class="paragraph1">
                 <p class="el1">NEED</p>
                 <p class="el2">A</p>
@@ -270,13 +303,11 @@
 
         </section>
 
-        <!-- barre de scroll, js scrollto, bouton remonter en haut, responsive, animation au défilement, menu burger scrollto, pageloader -->
+        <!--animation au défilement, pageloader -->
         <footer>Florian PALVADEAU | PortFolio</footer>
     </section>
-    
 
-<script src="https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
 </body>
 </html>
 
