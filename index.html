@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Festive&family=Mukta:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.css' rel='stylesheet'>
     <script src="js/script.js" defer></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.js'></script>
+    
     <title>Mon PortFolio</title>
 </head>
 <body>
@@ -22,14 +25,14 @@
                     <p class="name">FLORIAN PALVADEAU</p>
                     <p class="status">Student at <a href="https://www.iim.fr/">IIM</a> in the web-development axis</p>
                     <p class="shortIntro">Since 2 years from now, coding went from a simple hobby to a way of living. I'm training every day with perseverence to perfect the languages that i use to code with but also to learn some new ones !</p>
-                    <p class="projectsOrAbout"><a href="#">View Projects</a> or <a href="#">About me</a></p>
+                    <p class="projectsOrAbout"><a href="#projects">View Projects</a> or <a href="#aboutMe">About me</a></p>
                 </div>
                 <lord-icon class="scrollGIF"src="https://cdn.lordicon.com/xwjtkymn.json" trigger="loop" colors="primary:#121331,secondary:#000000" style="width:250px;height:250px"> </lord-icon>
             
             </div>  
         </header>
 
-        <section class="aboutMe">
+        <section class="aboutMe" id="aboutMe">
             <div class="presentation">
                 <h2 class="paragraph1">
                     <p class="el1">A</p>
@@ -40,7 +43,7 @@
                 </h2>
                 <p class="paragraph2">I'm Florian PALVADEAU, an IIM's school student in it's secondary year out of five of studying web-development, in order to get diplomated of a web-ingeneering master. 
                 </p>
-                <p class="paragraph3">Over the past 2 years, I have been developing many different skills, both in <a href=".hardskills">hardskills</a> and in <a href=".softskills">softskills</a>. I am passionate about coding, and I'm always trying to push my limits in order to increase my knowledge and reduce my weaknesses according to each programming language.
+                <p class="paragraph3">Over the past 2 years, I have been developing many different skills, both in <a href="#skills">hardskills</a> and in <a href="#skills">softskills</a>. I am passionate about coding, and I'm always trying to push my limits in order to increase my knowledge and reduce my weaknesses according to each programming language.
                 My goal is to become the best web-developer that i could ever be, and I'm really determined to, maybe one day, become a renowned developer.
                 </p>
 
@@ -59,7 +62,7 @@
             </div>
             <p class="paragraph3">‣ In 2017, i had the chance to get an internship with a web-ingeneer at the Saint-Quentin-En-Yvelines's community's agglomeration. During this period, i mainly learnt the basics of the adobe's suite, which kinda introduced me into the digital world.<br><br>
                               ‣ Four years later, i did a five weeks long internship with the same web-ingeneer during summer, but this time in order to develop for the community's agglomeration an innovative map that they might integrate one day to their website. 
-                              If you wanna learn more about this project, click here to <a href="#">view my projects</a>
+                              If you wanna learn more about this project, click here to <a href="#projects">view my projects</a>
             </p>
             <div class="paragraphExperiences">
                 <p class="el1">MY</p>
@@ -92,7 +95,7 @@
 
         </section>
 
-        <section class="skills">
+        <section class="skills" id="skills">
 
             <h4 class="paragraph1">
                 <p class="el1">WHAT</p>
@@ -141,7 +144,7 @@
             </div>
         </section>
 
-        <section class="projects">
+        <section class="projects" id='projects'>
             <h5 class="paragraph1">
                 <p class="el1">MY</p>
                 <p class="el2">PROJECTS</p>
@@ -207,33 +210,73 @@
         </section>
 
         <section class="contact">
-            <p>NEED A DEVELOPER ?</p>
             <h6 class="paragraph1">
-                <p class="el1">LET'S</p>
-                <p class="el2">WORK</p>
-                <p class="el3">TOGETHER</p>
-            </h6>
+                <p class="el1">NEED</p>
+                <p class="el2">A</p>
+                <p class="el3">DEVELOPER</p>
+                <p class="el4">?</p>
+                </h6>
+            <div class="container">
+                <div class="gridContact">
+                    <p class="el1">L</p>
+                    <p class="el2">E</p>
+                    <p class="el3">T'</p>
+                    <p class="el4">S</p>
+                    <p class="el5">W</p>
+                    <p class="el6">O</p>
+                    <p class="el7">R</p>
+                    <p class="el8">K</p>
+                    <p class="el9">T</p>
+                    <p class="el10">O</p>
+                    <p class="el11">G</p>
+                    <p class="el12">E</p>
+                    <p class="el13">T</p>
+                    <p class="el14">H</p>
+                    <p class="el15">E</p>
+                    <p class="el16">R</p>
+                </div>
 
-            <p>GET IN TOUCH</p>
-            <p>ADDRESS</p>
-            <p>Florian Palvadeau</p>
-            <p>105 rue de la brèche-du-houx - 78760</p>
-            <p>France, EU</p>
+                <div id='map'></div>
+            
+                <div class="contactInfos">
+                    
+                    <div class="adress">
+                        <p>GET IN TOUCH</p>
+                        <p>ADDRESS</p>
+                        <p>Florian Palvadeau</p>
+                        <p>105 rue de la brèche-du-houx - 78760</p>
+                        <p>France, EU</p>
 
-            <img src="images/PhotoMe2.png" alt="Photo of Florian PALVADEAU">
+
+                        <div class="socialNetworks">
+                            <a href="https://www.instagram.com/flo.plvd/?hl=fr"><img src="images/logoINSTAGRAM.png" alt="logo Instagram"></a>
+                            <a href="https://www.linkedin.com/in/florian-palvadeau/"><img src="images/logoLINKEDIN.png" alt="logo LinkedIn"></a>
+                            <a href="https://github.com/FlorianPALVADEAU"><img src="images/logoGITHUB.png" alt="logo GitHub"></a>
+                            <a href=""><img src="images/logoGMAIL.png" alt="logo Gmail"></a>
+                            
+                            
+                        </div>
+                    </div>
+                
+                
+                </div>
+                
+            </div>   
+
+            
+            
+
+            
 
         </section>
 
         <!-- barre de scroll, js scrollto, bouton remonter en haut, responsive, animation au défilement, menu burger scrollto, pageloader -->
-        <footer></footer>
+        <footer>Florian PALVADEAU | PortFolio</footer>
     </section>
     
 
 <script src="https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
-<script>
-    new Glide('.glide').mount()
-</script>
 </body>
 </html>
 
