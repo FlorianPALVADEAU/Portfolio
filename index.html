@@ -19,13 +19,21 @@
     
 </head>
 <body>
+    <!-- page loader -->
     <div class="loader-wrapper">
         <span class="loader">
             <div class="loaderimg"></div>
         </span>
     </div>
+
+
+
     <section class="container">
+
+
         <button class="boutonScrollTop" onclick="topFunction()"><img src="images/arrowUp.png" alt="arrow button"></button>
+
+        <!-- header -->
         <div class="header">
             <div class="logo">Florian PALVADEAU</div>
 
@@ -50,6 +58,8 @@
             
 
         </div>
+
+        <!-- accueil -->
         <header id='home'>
             <div class="grid">
                 <h1>developer.</h1>
@@ -57,7 +67,7 @@
                 <div class="introducingMyself"  data-speed="-1">
                     <p class="name">FLORIAN PALVADEAU</p>
                     <p class="status">Student at <a href="https://www.iim.fr/">IIM</a> in the web-development axis</p>
-                    <p class="shortIntro">Since 2 years from now, coding went from a simple hobby to a way of living. I'm training every day with perseverence to perfect the languages that i use to code with but also to learn some new ones !</p>
+                    <p class="shortIntro">For 2 years now, coding has become for me a new way of living instead of a simple hobby. I have been learning every day with perseverence in order to improve my development skills, while being excited to learn new ones permanently !</p>
                     <p class="projectsOrAbout"><a href="#projects">View Projects</a> or <a href="#aboutMe">About me</a></p>
                 </div>
                 <lord-icon class="scrollGIF"src="https://cdn.lordicon.com/xwjtkymn.json" trigger="loop" colors="primary:#121331,secondary:#000000" style="width:250px;height:250px"> </lord-icon>
@@ -65,6 +75,8 @@
             </div>  
         </header>
 
+
+        <!-- about me-->
         <section class="aboutMe" id="aboutMe">
             <div class="presentation">
                 <h2 class="paragraph1">
@@ -74,7 +86,7 @@
                     <p class="el4">ABOUT</p>
                     <p class="el5">ME</p>
                 </h2>
-                <p class="paragraph2 reveal">I'm Florian PALVADEAU, an IIM's school student in it's secondary year out of five of studying web-development, in order to get diplomated of a web-ingeneering master. 
+                <p class="paragraph2 reveal">I'm Florian PALVADEAU, a student at <a href="https://www.iim.fr/">IIM</a> school, doing my second year fo web-development, in order to get graduated of a web-ingeneering master in 3 years from now. 
                 </p>
                 <p class="paragraph3 reveal">Over the past 2 years, I have been developing many different skills, both in <a href="#skills">hardskills</a> and in <a href="#skills">softskills</a>. I am passionate about coding, and I'm always trying to push my limits in order to increase my knowledge and reduce my weaknesses according to each programming language.
                 My goal is to become the best web-developer that i could ever be, and I'm really determined to, maybe one day, become a renowned developer.
@@ -93,16 +105,16 @@
                 <p class="el2">WEB</p>
                 <p class="el3">EXPERIENCES</p>
             </div>
-            <p class="paragraph3 revealimgRight">‣ In 2017, i had the chance to get an internship with a web-ingeneer at the Saint-Quentin-En-Yvelines's community's agglomeration. During this    period, i have mainly learnt the basics of the adobe's suite, which kinda introduced me into the digital world.<br><br>
-                              ‣ Four years later, i did a five weeks long internship with the same web-ingeneer during summer, but this time in order to develop for the community's agglomeration an innovative map that they might integrate one day to their website. 
-                              If you wanna learn more about this project, click here to <a href="#projects">view my projects</a>
+            <p class="paragraph3 revealRight">‣ In 2017, i had the chance to get an internship with a web-ingeneer at the Saint-Quentin-En-Yvelines's community's agglomeration. During this period, i have mainly learnt the basics of the adobe's suite, which provided me the fundamentals of the web digital world.<br><br>
+                              ‣ Four years later, i did a five weeks long internship in the same company, but this time development purpose : it did consist in designing and developing an innovative interactive map that had to be integrated to a legacy website for modernizing it.
+                              Here is the link to this project : <a href="#projects">view my project</a>
             </p>
             <div class="paragraphExperiences reveal">
                 <p class="el1">MY</p>
                 <p class="el2">PERSONNAL </p>
                 <p class="el2">HOBBIES</p>
             </div>
-            <p class="paragraph3 revealimgLeft">I really enjoy being out with my friends, or my family. Moreover, i am very sporty : i'm doing DownHill bike with some friends of mine, but also going 3 to 5 times a week to the gym. Sports are a real passion for me, as well as web-development.</p>
+            <p class="paragraph3 revealLeft">I really enjoy being out with my friends, or my family. Moreover, i am very sporty : i'm doing DownHill bike with some friends of mine, but also going 3 to 5 times a week to the gym. Sports are a real passion for me, as well as web-development.</p>
 
 
             <div class="title2 reveal">
@@ -112,7 +124,7 @@
                 <p class="el3">OF</p>
                 <p class="el4">ME</p>
             </h3>
-
+                <!-- grid images of me -->
             <div class="gridAboutMe">
                 <div class="pic pic1 revealimg"></div>
                 <div class="pic pic2 revealimg"></div>
@@ -124,9 +136,10 @@
                 <iframe class ="revealimgRight" src="https://www.youtube.com/embed/DlDdXll9dm4?start=9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
 
-            
-
         </section>
+
+
+    <!-- skills section -->
 
         <section class="skills reveal" id="skills">
 
@@ -139,8 +152,10 @@
             </h4>
 
             <p class="skillsInfo reveal">Thanks to my school and a part of my curiosity, i have been able to develop many <b>hardskills</b> in the web-development area. I am able to realize a complete website from the wireframe to the development and the FTP.
-                My main coding languages are HTML, CSS, JavaScript and PhP but i can also use Sass, MySQL, JSON, Python, and i am currently learning vue.js and Symfony by myself. Moreover, i will learn later this year Swift, and the APIs.
-                In addition, i am very comfortable with Photoshop, Sony Vegas Pro, and can easily manipulate other softwares such as Illustrator, XD, Lightroom, InDesign, 3DSMax, Cinema4D, Unity.<br><br><br>
+                My main coding languages are HTML, CSS, JavaScript and PhP but i can also use Sass, MySQL, JSON, Python, and i am currently learning vue.js and Symfony by myself. Moreover, i will learn later this year additional skills such as Swift or Resr APIs.
+                In addition to this, i am very comfortable with CAD softwares and video making like Photoshop, Sony Vegas Pro, as well as Illustrator, XD, Lightroom, InDesign, 3DSMax, Cinema4D, Unity. Here are a couple of projects i did last year with this softwares : <a href="https://www.dropbox.com/home/Florian's%20shared%20workspace">see my dropbox project's file</a><br>
+                
+                Complementarily, i acquired basics skills of video game designing and programming. Here is the link to my video game : <a href="https://youtu.be/zZXLvoesPe8">Rootie's Run</a><br><br>
 
                 Luckily, my school is giving lessons of <b>softskills</b> to it's students, in order to prevent them of the embarrassing situations that could happen in the professional working area, or simply in the real life.
                 I have learnt to work in team, how to manage my stress, my timetable, some angry people, and many other stuff, but also how to behave correctly and professionally from a situation to another.
@@ -156,10 +171,8 @@
             </div>
 
             <div class="infoIcon reveal">
-
-                <div class="tools reveal">
-                    <div class="devLanguages">
-
+                <div class="tools">
+                    <div class="devLanguages revealLeft">
                         <div class="gridLanguages">
     
                             <img src="images/iconHTML.png" alt="HTML">
@@ -172,10 +185,14 @@
                             <img src="images/iconJSON.png" alt="JSON">
                         </div>
                     </div>
-                    <p><b>Photoshop</b> / <b>Illustrator</b> / <b>XD</b> / <b>Sony Vegas Pro</b> / <b>Lightroom</b> / <b>Visual Studio</b></p>
+                    <p class="revealRight"><b>Photoshop</b> / <b>Illustrator</b> / <b>XD</b> / <b>Sony Vegas Pro</b> / <b>Lightroom</b> / <b>Visual Studio</b></p>
                 </div>
             </div>
         </section>
+
+
+
+        <!-- projects section -->
 
         <section class="projects" id='projects'>
             <h5 class="paragraph1 reveal">
@@ -183,10 +200,10 @@
                 <p class="el2">PROJECTS</p>
             </h5>
 
+
+            <!-- slider of all my projets-->
             <div class="glide">
-
                 <div class="glide__track" data-glide-el="track">
-
                   <ul class="glide__slides">
 
                         <li class="glide__slide"><div id="container1" class="containers">
@@ -242,6 +259,11 @@
 
         </section>
 
+
+
+
+        <!-- contact section-->
+
         <section class="contact reveal" id="contact">
             <h6 class="paragraph1">
                 <p class="el1">NEED</p>
@@ -269,7 +291,9 @@
                     <p class="el16 reveal">R</p>
                 </div>
 
-                <div id='map'></div>
+                
+                <div id='map' alt="map"></div>
+                <p class="pMap">*click the marker ;)</p>
             
                 <div class="contactInfos reveal">
                     
@@ -305,6 +329,8 @@
         <footer>Florian PALVADEAU | PortFolio</footer>
     </section>
 
+
+    <script src="https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js"></script>
     <script src="js/jquery-3.4.1.min.js"></script>
 </body>
 </html>

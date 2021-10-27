@@ -15,127 +15,6 @@
     --purple-color: rgb(122, 13, 122);
 }
 
-::-webkit-scrollbar {
-    border-radius: 10px;
-    height: 10px;
-    width: 10px;
-}
-::-webkit-scrollbar-thumb {
-    background: var(--text-color-hover-or-lighter);
-    border-radius: 10px;
-}
-::-webkit-scrollbar-track {
-    border-radius: 10px;
-}
-
-.layer{
-
-}
-.reveal{
-    transform: translateY(150px);
-    opacity: 0;   
-}
-
-.reveal{
-    transform: translateY(150px);
-    opacity: 0;   
-}
-
-.revealLeft{
-    transform: translateX(-200px);
-    opacity: 0;
-}
-.revealimgLeft{
-    transform: translateX(-200px);
-    opacity: 0;
-}
-
-.revealRight{
-    transform: translateX(200px);
-    opacity: 0;
-}
-.revealimgRight{
-    transform: translateX(200px);
-    opacity: 0;
-}
-
-.reveal2{
-    transform: translateY(200px);
-    opacity: 0;
-}
-.revealimg2{
-    transform: translateY(200px);
-    opacity: 0;
-}
-.reveal3{
-    transform: translateY(300px);
-    opacity: 0;
-}
-.reveal4{
-    transform: translateY(500px);
-    opacity: 0;
-}
-
-.active{
-    transform: translateY(0px);
-    opacity: 1;
-}
-
-.loader-wrapper {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-image: url(/images/page-loader.png);
-    filter:  grayscale(0.2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 99999;
-}
-
-.loader {
-    margin-top: 600px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    z-index: 10000;
-    
-    
-}
-
-.loaderimg{
-    width: 100px;
-    height: 100px;
-    position: relative;
-    background-size: cover;
-    background-position: center;
-    background-image: url(/images/pageLoader.gif);
-    animation: animate 1s infinite ease-in-out;
-    z-index: 10001;
-    }
-
-@keyframes animate{
-    0%{
-        transform: scale(0.95);
-    }
-    20%{
-        transform: scale(1.5);
-    }
-    55%{
-        transform: scale(1.56);
-    }
-    80%{
-        transform: scale(1.5);
-    }
-    100%{
-        transform: scale(1);
-    }
-
-}
-
 body{
     font-family: 'Mukta', sans-serif;
     background-color: var(--background-color);
@@ -155,6 +34,121 @@ body{
     flex-direction: column;
 }
 
+
+
+
+// start of solo classes or Js adding/deleting classes
+::-webkit-scrollbar {
+    border-radius: 10px;
+    height: 10px;
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--text-color-hover-or-lighter);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+.reveal{
+    transform: translateY(150px);
+    opacity: 0;   
+}
+.reveal{
+    transform: translateY(150px);
+    opacity: 0;   
+}
+.revealLeft{
+    transform: translateX(-200px);
+    opacity: 0;
+}
+.revealimgLeft{
+    transform: translateX(-200px);
+    opacity: 0;
+}
+.revealRight{
+    transform: translateX(200px);
+    opacity: 0;
+}
+.revealimgRight{
+    transform: translateX(200px);
+    opacity: 0;
+}
+.reveal2{
+    transform: translateY(200px);
+    opacity: 0;
+}
+.revealimg2{
+    transform: translateY(200px);
+    opacity: 0;
+}
+.reveal3{
+    transform: translateY(300px);
+    opacity: 0;
+}
+.reveal4{
+    transform: translateY(500px);
+    opacity: 0;
+}
+.active{
+    transform: translateY(0px);
+    opacity: 1;
+}
+.loader-wrapper {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image: url(/images/page-loader.png);
+    filter:  grayscale(0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+}
+.loader {
+    margin-top: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 10000;
+    
+    
+}
+.loaderimg{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-image: url(/images/pageLoader.gif);
+    animation: animate 1s infinite ease-in-out;
+    z-index: 10001;
+    }
+@keyframes animate{
+    0%{
+        transform: scale(0.95);
+        font-weight: 400;
+    }
+    20%{
+        transform: scale(1.5);
+        font-weight: 500;
+    }
+    55%{
+        transform: scale(1.56);
+    }
+    80%{
+        transform: scale(1.5);
+        font-weight: 500;
+    }
+    100%{
+        transform: scale(1);
+        font-weight: 450;
+    }
+
+}
 .boutonScrollTop{
     z-index: 1000;
     width: 50px;
@@ -178,8 +172,7 @@ body{
 
     
 }
-
-.boutonScrollTop.noDisplay{
+.boutonScrollTop.noDisplay, .pMap.noDisplay{
     display: none;
     transition: all 0.7s ease-in-out;
 }
@@ -187,17 +180,26 @@ body{
     transform-origin:bottom;
     transform:rotatez(45deg) translate(8px,0px)
 }
-
 .change .line-2 {
     transform-origin:top;
     transform:rotatez(-45deg)
 }
-
 .change .line-3 {
     transform-origin:bottom;
     width:50%;
     transform: translate(17px,-16.25px) rotatez(45deg) scaleX(0.95);
 }
+
+// end of solo classes or Js adding/deleting classes
+
+
+
+
+
+
+
+
+//HEADER
 .header{
     width: 94vw;
     height: 10vh;
@@ -325,6 +327,11 @@ body{
         }
     }
 
+
+
+
+
+// HOME SECTION
 header{
     display: flex;
     justify-content: center;
@@ -376,6 +383,7 @@ header{
 
     lord-icon.scrollGIF{
         position: absolute;
+        z-index: 10000;
         top: 82vh;
         left: 42vw;
         z-index: 2;
@@ -401,7 +409,6 @@ header{
             &:hover{
                 cursor: pointer;
             }
-            
         }
 
         .status{
@@ -422,10 +429,10 @@ header{
         }
 
         .shortIntro{
-            margin-top: 40px;
+            margin-top: 25px;
             font-weight: 400;
             color: var(--text-color-hover-or-lighter);
-            font-size: 26px;
+            font-size: 22px;
             width: 40ch;
             transition: 0.1s ease;
             grid-column: 2 / 6;
@@ -455,6 +462,12 @@ header{
 }
 
 
+
+
+
+
+
+//ABOUT ME SECTION
 .aboutMe{
     width: 100%;
     display: flex;
@@ -526,9 +539,9 @@ header{
     }
     .paragraph2{
         font-weight: 650;
-        font-size: 48px;
+        font-size: 50px;
         line-height: 56px;
-        width: 65vw;
+        width: 60vw;
         
     }
     .paragraph3{
@@ -550,7 +563,7 @@ header{
         }
     }
 
-
+    //grid pictures of me
     .gridAboutMe{
         margin-top: 0;
         max-width: 60vw;
@@ -638,6 +651,12 @@ header{
         }
     }
 }
+
+
+
+
+
+//SKILLS SECTION
 .skills{
     margin-top: 0vh;
     width: 100vw;
@@ -688,7 +707,7 @@ header{
             }
         }
     }
-
+    // languages i use / tools i use
     .skillsHeading{
         width: 90vw;
         display: flex;
@@ -744,9 +763,10 @@ header{
             display: flex;
             justify-content: space-around;
             align-items: center;
-
-            .gridLanguages{
             
+
+            //Grid of all my dev languages used and "known"
+            .gridLanguages{
                 max-width: 50vw;
                 height: 30vh;
                 display: grid;
@@ -756,8 +776,6 @@ header{
                 column-gap: 20px;
                 object-fit: cover;
                 grid-auto-flow: dense;
-
-            
 
                 img{
                     width: 4vw;
@@ -802,6 +820,10 @@ header{
     }
 }
 
+
+
+
+// PROJECTS SECTION
 .projects{
     width: 70vw;
     text-align: center;
@@ -830,6 +852,8 @@ header{
             }
         }
     }
+
+    //slider properties
     .glide{
         width:100%;
     }
@@ -858,6 +882,8 @@ header{
         }
         
     }
+
+    //slide properties
     #container1, #container2, #container3, #container4{
         display: flex;
         justify-content: center;
@@ -893,6 +919,11 @@ header{
     }    
 }
 
+
+
+
+
+//CONTACT SECTION
 
 .contact{
     display: flex;
@@ -932,6 +963,15 @@ header{
         justify-content: center;
         align-items: center;
         text-align: center;
+        .pMap{
+            position: absolute;
+            z-index: 100;
+            color: var(--text-color);
+            top: 58vh;
+            right: 70vw;
+            font-size: 16px;
+            font-weight: 600;
+        }
         #map{
             position: absolute;
             top: 17vh;
@@ -965,6 +1005,9 @@ header{
     
         }
 
+
+
+        //Grid let's work together
         .gridContact{
             position: absolute;
             top: 10vh;
@@ -985,9 +1028,6 @@ header{
                 font-weight: bold;
                 cursor: pointer;
             }
-
-            
-           
             :nth-child(5), :nth-child(6), :nth-child(7){
                 color: white;
             }
@@ -996,6 +1036,8 @@ header{
             }
         }
 
+
+        //info about me (adress, social networks)
         .contactInfos{
             margin-top: 70vh;
             width: 100vw;
@@ -1020,8 +1062,6 @@ header{
                 }
                 
             }
-
-
             .socialNetworks{
                 width: 50vw;
                 margin-top: 12vh;
@@ -1035,10 +1075,9 @@ header{
         }
         
     }
-
-
 }
 
+//footer
 footer{
     height: 25vh;
     width: 100vw;
@@ -1054,12 +1093,14 @@ footer{
 
 
 
+
+
+// MOBILE RESPONSIVE PART
 @media screen and (max-width: 600px) {
 
     body{
         max-width: 100vw;
     }
-
     .header{
         width: 100vw;
     
@@ -1118,13 +1159,7 @@ footer{
             
         }
         h1{
-            font-size: 80px;
-            letter-spacing: 1px;
-            z-index: 1;
-            grid-column: 0 / 4;
-            grid-row: 1 / 3 ;
-            margin-left: -140px;
-            text-shadow: 0 10px 20px rgba(0, 0, 0, 0.09);
+            display: none;
         }
         img{
             z-index: 2;
@@ -1133,7 +1168,7 @@ footer{
             width: 100vw;
         }
         lord-icon.scrollGIF{
-            top: 80vh;
+            top: 77vh;
             left: 15vw;
         }
         .introducingMyself{
@@ -1158,8 +1193,9 @@ footer{
     
             .shortIntro{
                 margin-top: 10px;
-                font-size: 18px;
+                font-size: 16px;
                 width: 30ch;
+                line-height: 18px;
             }
     
             .projectsOrAbout{
@@ -1208,6 +1244,7 @@ footer{
             font-size: 18px;
             width: 80vw;
             letter-spacing: -1px;
+            line-height: 20px;
         }
         .gridAboutMe{
             margin-top: 0;
@@ -1251,13 +1288,15 @@ footer{
         .paragraph1{
             font-size: 20px;
             margin-bottom: 5vh;
-            width: 80vw;
+            width: 90vw;
+            letter-spacing: 5px;
         }
         .skillsInfo{
             font-size: 16px;
             width: 80vw;
             letter-spacing: -1px;
             margin-bottom: 15vh;
+            line-height: 18px;
         }
     
         .skillsHeading{
@@ -1329,12 +1368,13 @@ footer{
         }
         #container1, #container2, #container3, #container4{
             width: 100%;
-            background-color: rgb(245, 245, 245);
+            background-color: rgb(248, 248, 248);
             margin-bottom: 50px;
             border-radius: 50px;
             iframe{
                 width: 80%;
                 height: 30vh;
+                border-radius: 10px;
             }
             p{
                 font-size: 10px;
@@ -1358,6 +1398,10 @@ footer{
         }
         .container{
             width: 100vw;
+
+            .pMap{
+                display: none;
+            }
             #map{
                 display: none;
             }
@@ -1380,7 +1424,7 @@ footer{
                 }
             }
             .contactInfos{
-                margin-top: 60vh;
+                margin-top: 65vh;
                 margin-bottom: 15px;
                 z-index: 100;
                 .socialNetworks{
@@ -1390,9 +1434,6 @@ footer{
             } 
         }
     }
-
-
-
     .loader-wrapper {
         position: fixed;
         width: 100%;
@@ -1411,15 +1452,11 @@ footer{
         align-items: center;
         overflow: hidden;
     }
-
     .loader {
         margin-bottom: 400px;
         z-index: 10000;
     }
-
     .boutonScrollTop{
-        z-index: 1000;
-        right: 5vw;
-        
+        display: none;
     }
 }
