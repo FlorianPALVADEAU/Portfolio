@@ -271,7 +271,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row-reverse;
+  flex-direction: row;
   margin-left: -5vw;
   box-sizing: border-box;
 }
@@ -280,7 +280,6 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  flex-direction: row-reverse;
   text-align: center;
 }
 .header .navbar .lien li a {
