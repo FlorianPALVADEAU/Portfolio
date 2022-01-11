@@ -1,5 +1,5 @@
 
-//PAGE LOADER
+// //PAGE LOADER
 $(window).on("load", function () {
     $(".loader-wrapper").fadeOut("slow");
 });
@@ -11,6 +11,7 @@ const navbar = document.querySelector(".navbar");
 
 menuicon.addEventListener("click", () => {
     navbar.classList.toggle("change");
+    console.log('test')
 });
     
     
