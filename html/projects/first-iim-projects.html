@@ -19,11 +19,11 @@
 </head>
 <body>
     <!-- page loader -->
-    <!-- <div class="loader-wrapper">
+    <div class="loader-wrapper">
         <span class="loader">
             <div class="loaderimg"></div>
         </span>
-    </div> -->
+    </div>
 
 
 
@@ -46,12 +46,11 @@
                 </div>
 
                 <ul class="lien">
-                    <li><a href="../../index.html"><b>Home</b></a></li>
-                    <li><a href="../aboutMe.html"><b>About Me</b></a></li>
-                    <li><a href="../skills.html"><b>Skills</b></a></li>
-                    <li><a href="../projects.html"><b>Projects</b></a></li>
-                    <li><a href="../contact.html"><b>Contact</b></a></li>
-            
+                    <a href="../../index.html"><li><b>Home</b></li></a>
+                    <a href="../aboutMe.html"><li><b>About Me</b></li></a>
+                    <a href="../skills.html"><li><b>Skills</b></li></a>
+                    <a href="../projects.html"><li><b>Projects</b></li></a>
+                    <a href="../contact.html"><li><b>Contact</b></li></a>
                 </ul>
             </nav>
             
@@ -61,10 +60,8 @@
 
 
     <!-- projects section -->
-    <a href="../projects.html" style="width:10vw; height: 6vh; display: flex; justify-content: center; align-items: center; background-color: rgb(240, 50, 50); color: white; text-decoration: none; position: absolute; top: 10%; left: 0;">
-        ← Back to projects
-    </a>
     <section class="projects" id='projects'>
+        <a href="../projects.html" class="backButton">← Back to projects</a>
         <div class="container">
             <h5 class="paragraph1">
                 My firsts projects at IIM
@@ -87,14 +84,15 @@
                 </a>
                 <a href="./dashboard.html" class="card card3">
                     <img src="../../images/Screenshot_dashboard.png" alt="IMAGE_PROJECT">
-                    <p>Une plateforme gérant les locations d'une entreprise de location de voiture de luxe</p>
+                    <p>A working platform to manage the rentals of a luxury car rental company</p>
                 </a>   
             </div>  
         </div>
 
     </section>
-
         <footer>Florian PALVADEAU | PortFolio</footer>
     </section>
+    
+    <script src="../../js/jquery-3.4.1.min.js"></script>
 </body>
 </html>

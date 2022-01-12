@@ -1,8 +1,8 @@
 
 //PAGE LOADER
-// $(window).on("load", function () {
-//     $(".loader-wrapper").fadeOut("slow");
-// });
+$(window).on("load", function () {
+    $(".loader-wrapper").fadeOut("slow");
+});
 
 
 //MENU BURGER
@@ -40,9 +40,9 @@ function topFunction() {
 window.addEventListener('scroll', reveal);
 
 function reveal(){
-  var reveals = document.querySelectorAll('.revealSkills');
-  var revealsLeft = document.querySelectorAll('.revealSkillsLeft');
-  var revealsRight = document.querySelectorAll('.revealSkillsRight');
+  var reveals = document.querySelectorAll('.reveal');
+  var revealsLeft = document.querySelectorAll('.revealLeft');
+  var revealsRight = document.querySelectorAll('.revealRight');
   
     for (var i = 0 ; i < reveals.length ; i++){
 

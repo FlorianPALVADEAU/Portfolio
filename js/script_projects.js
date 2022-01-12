@@ -1,8 +1,8 @@
 
 // //PAGE LOADER
-// $(window).on("load", function () {
-//     $(".loader-wrapper").fadeOut("slow");
-// });
+$(window).on("load", function () {
+    $(".loader-wrapper").fadeOut("slow");
+});
 
 
 //MENU BURGER
@@ -11,7 +11,6 @@ const navbar = document.querySelector(".navbar");
 
 menuicon.addEventListener("click", () => {
     navbar.classList.toggle("change");
-    console.log('test')
 });
     
 

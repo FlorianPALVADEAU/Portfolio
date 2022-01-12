@@ -1,5 +1,4 @@
-
-//PAGE LOADER
+// //PAGE LOADER
 $(window).on("load", function () {
     $(".loader-wrapper").fadeOut("slow");
 });
@@ -12,6 +11,56 @@ const navbar = document.querySelector(".navbar");
 menuicon.addEventListener("click", () => {
     navbar.classList.toggle("change");
 });
+
+//MAPBOX
+const geojson = {
+    type: 'FeatureCollection',
+    features: [
+      {
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [1.900330766926106, 48.80262283112147]
+        },
+        properties: {
+          title: 'Jouars-Pontchartrain',
+          description: 'Here is the city where i live !'
+        }
+      }
+    ]
+  };
+
+  geojson.features.forEach(function (marker) {
+
+    var el = document.createElement('div');
+    el.className = 'marker';
+    
+    let tmpMarker = new mapboxgl.Marker(el)
+    let tmpPopUp = new mapboxgl.Popup()
+        .setHTML('<h3>' + marker.properties.title + '</h3><p>' + marker.properties.description + '</p>')
+    
+    el.markerInstance = tmpMarker;
+    
+    tmpMarker
+        .setLngLat(marker.geometry.coordinates)
+        .setPopup(tmpPopUp)
+        .addTo(map);
+    
+    el.addEventListener("click", e => {
+        var pMap = document.querySelector('.pMap')
+        let coords = e.target.markerInstance.getLngLat();
+        pMap.classList.add('noDisplay')
+        map.flyTo({
+            bearing: 10,
+            pitch: 50,
+            center: [1.900330766926106, 48.80262283112147],
+            zoom: 16,
+            speed: 0.8,
+        });
+    });
+    
+});
+
 
 
 //SCROLLTOP BUTTON
@@ -34,7 +83,6 @@ function topFunction() {
         behavior: "smooth",
     })
 };
-
 
 //REVEAL ON SCROLL
 window.addEventListener('scroll', reveal);
@@ -93,7 +141,49 @@ function reveal(){
         revealRight[i].classList.remove('active');
       }
     }
-    
+
+    for (var i = 0 ; i < reveal2.length ; i++){
+
+      var windowHeight = window.innerHeight;
+      var revealTop = reveal2[i].getBoundingClientRect().top;
+      var revealPoint = 130;
+
+      if (revealTop < windowHeight - revealPoint){
+        reveal2[i].classList.add('active');
+      }
+      else{
+        reveal2[i].classList.remove('active');
+      }
+    }
+
+    for (var i = 0 ; i < reveal3.length ; i++){
+
+      var windowHeight = window.innerHeight;
+      var revealTop = reveal3[i].getBoundingClientRect().top;
+      var revealPoint = 150;
+
+      if (revealTop < windowHeight - revealPoint){
+        reveal3[i].classList.add('active');
+      }
+      else{
+        reveal3[i].classList.remove('active');
+      }
+    }
+
+    for (var i = 0 ; i < reveal4.length ; i++){
+
+      var windowHeight = window.innerHeight;
+      var revealTop = reveal4[i].getBoundingClientRect().top;
+      var revealPoint = 180;
+
+      if (revealTop < windowHeight - revealPoint){
+        reveal4[i].classList.add('active');
+      }
+      else{
+        reveal4[i].classList.remove('active');
+      }
+    }
+
     for (var i = 0 ; i < revealimg.length ; i++){
 
       var windowHeight = window.innerHeight;

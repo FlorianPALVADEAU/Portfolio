@@ -8,10 +8,12 @@ $(window).on("load", function () {
 //MENU BURGER
 const menuicon = document.querySelector('.hamburger-menu');
 const navbar = document.querySelector(".navbar");
+const line = document.querySelectorAll("#line");
+
+
 
 menuicon.addEventListener("click", () => {
-    navbar.classList.toggle("change");
-    console.log('test')
+    navbar.classList.toggle("change");    
 });
     
     

@@ -9,14 +9,14 @@
     <meta name="description" content="As a student developer, my goal is to become the best web-developer that i could ever be. I'm working really hard to achieve my dream.">
     <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/photoMec.png">
-    <link rel="apple-touch-icon" type="image/png" sizes="16x16" href="/images/photoMec.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/photoMec.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="16x16" href="../images/photoMec.png">
     <link href="https://fonts.googleapis.com/css2?family=Festive&family=Mukta:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link href='https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
     <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide" defer></script>
-    <script src='https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.js'></script>
-    <script src="js/script.js" defer></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+    <script src="../js/script.js" defer></script>
     
     
 </head>
@@ -33,7 +33,7 @@
     <section class="container">
 
 
-        <button class="boutonScrollTop" onclick="topFunction()"><img src="images/arrowUp.png" alt="arrow button"></button>
+        <button class="boutonScrollTop" onclick="topFunction()"><img src="../images/arrowUp.png" alt="arrow button"></button>
 
         <!-- header -->
         <div class="header">
@@ -49,238 +49,23 @@
                 </div>
 
                 <ul class="lien">
-                    <li><a href="index.html"><b>Home</b></a></li>
-                    <li><a href="html/aboutMe.html"><b>About Me</b></a></li>
-                    <li><a href="html/skills.html"><b>Skills</b></a></li>
-                    <li><a href="html/projects.html"><b>Projects</b></a></li>
-                    <li><a href="html/contact.html"><b>Contact</b></a></li>
-            
+                    <a href="../index.html"><li><b>Home</b></li></a>
+                    <a href="aboutMe.html"><li><b>About Me</b></li></a>
+                    <a href="skills.html"><li><b>Skills</b></li></a>
+                    <a href="projects.html"><li><b>Projects</b></li></a>
+                    <a href="contact.html"><li><b>Contact</b></li></a>
                 </ul>
             </nav>
             
 
         </div>
 
-        <!-- accueil -->
-        <header id='home'>
-            <div class="grid">
-                <h1>developer.</h1>
-                <img src="images/photoMec.png" alt="Profile Picture of Florian PALVADEAU">
-                <div class="introducingMyself">
-                    <p class="name">FLORIAN PALVADEAU</p>
-                    <p class="status">Student at <a href="https://www.iim.fr/" target="_blank">IIM</a> in the web-development axis</p>
-                    <p class="shortIntro">For 2 years now, coding has become for me a new way of living instead of a simple hobby. I have been learning every day with perseverence in order to improve my development skills, while being excited to learn new ones permanently !</p>
-                    <p class="projectsOrAbout"><a href="#projects">View Projects</a> or <a href="#aboutMe">About me</a></p>
-                </div>
-                <lord-icon class="scrollGIF"src="https://cdn.lordicon.com/xwjtkymn.json" trigger="loop" colors="primary:#121331,secondary:#000000" style="width:250px;height:250px"> </lord-icon>
-            
-            </div>  
-        </header>
-
-
-        <!-- about me-->
-        <section class="aboutMe" id="aboutMe">
-            <div class="presentation">
-                <h2 class="paragraph1">
-                    <p class="el1">A</p>
-                    <p class="el2">FEW</p>
-                    <p class="el3">WORDS</p>
-                    <p class="el4">ABOUT</p>
-                    <p class="el5">ME</p>
-                </h2>
-                <p class="paragraph2 reveal">I'm Florian PALVADEAU, a student at <a href="https://www.iim.fr/" target="_blank">IIM</a> school, doing my second year fo web-development, in order to get graduated of a web-ingeneering master in 3 years from now. 
-                </p>
-                <p class="paragraph3 reveal">Over the past 2 years, I have been developing many different skills, both in <a href="#skills">hardskills</a> and in <a href="#skills">softskills</a>. I am passionate about coding, and I'm always trying to push my limits in order to increase my knowledge and reduce my weaknesses according to each programming language.
-                My goal is to become the best web-developer that i could ever be, and I'm really determined to, maybe one day, become a renowned developer.
-                </p>
-
-                <div class="paragraphExperiences reveal">
-                    <p class="el1">MY</p>
-                    <p class="el2">PERSONNALITY</p>
-                </div>
-                <p class="paragraph3 reveal">I would say that my personnality is pretty adaptative depending from a situation to another, but more generally i'm a really devoted person, hard-working and determined.
-                I do not fear challenges, and always try to do my best to defeat them. Besides, I am very social and open-minded, which i think is a pretty good advantage in the digital world, because it allows me to be team-spirited and to understand my working mates easier.</p> 
-            </div>
-
-            <div class="paragraphExperiences reveal">
-                <p class="el1">MY</p>
-                <p class="el2">WEB</p>
-                <p class="el3">EXPERIENCES</p>
-            </div>
-            <p class="paragraph3 revealRight">‣ In 2017, i had the chance to get an internship with a web-ingeneer at the Saint-Quentin-En-Yvelines's community's agglomeration. During this period, i have mainly learnt the basics of the adobe's suite, which provided me the fundamentals of the web digital world.<br><br>
-                              ‣ Four years later, i did a five weeks long internship in the same company, but this time development purpose : it did consist in designing and developing an innovative interactive map that had to be integrated to a legacy website for modernizing it.
-                              Here is the link to this project : <a href="#projects">view my project</a>
-            </p>
-            <div class="paragraphExperiences reveal">
-                <p class="el1">MY</p>
-                <p class="el2">PERSONNAL </p>
-                <p class="el2">HOBBIES</p>
-            </div>
-            <p class="paragraph3 revealLeft">I really enjoy being out with my friends, or my family. Moreover, i am very sporty : i'm doing DownHill bike with some friends of mine, but also going 3 to 5 times a week to the gym. Sports are a real passion for me, as well as web-development.</p>
-
-
-            <div class="title2 reveal">
-            <h3 class="paragraph1">
-                <p class="el1">SOME</p>
-                <p class="el2">PICTURES</p>
-                <p class="el3">OF</p>
-                <p class="el4">ME</p>
-            </h3>
-                <!-- grid images of me -->
-            <div class="gridAboutMe">
-                <div class="pic pic1 revealimg"></div>
-                <div class="pic pic2 revealimg"></div>
-                <div class="pic pic3 revealimgLeft"></div>
-                <div class="pic pic4 revealimgLeft"></div>
-                <div class="pic pic5 revealimgRight"></div>
-                <div class="pic pic6 revealimgRight"></div>
-                <div class="pic pic7 revealimgLeft"></div>
-                <iframe class ="revealimgRight" src="https://www.youtube.com/embed/DlDdXll9dm4?start=9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-
-        </section>
-
-
-    <!-- skills section -->
-
-        <section class="skills reveal" id="skills">
-
-            <h4 class="paragraph1 reveal">
-                <p class="el1">WHAT</p>
-                <p class="el2">ARE</p>
-                <p class="el3">MY</p>
-                <p class="el4">SKILLS</p>
-                <p class="el5">?</p>
-            </h4>
-
-            <p class="skillsInfo reveal">Thanks to my school and a part of my curiosity, i have been able to develop many <b>hardskills</b> in the web-development area. I am able to realize a complete website from the wireframe to the development and the FTP.
-                My main coding languages are HTML, CSS, JavaScript and PhP but i can also use Sass, MySQL, JSON, Python, and i am currently learning vue.js and Symfony by myself. Moreover, i will learn later this year additional skills such as Swift or Resr APIs.
-                In addition to this, i am very comfortable with CAD softwares and video making like Photoshop, Sony Vegas Pro, as well as Illustrator, XD, Lightroom, InDesign, 3DSMax, Cinema4D, Unity. Here are a couple of projects i did last year with this softwares : <a href="https://www.dropbox.com/sh/cewk3741fy3ebz9/AACx9KDEcRv_zIdGd1FNEDt1a?dl=0" target="_blank">see my dropbox project's file</a><br>
-                
-                Complementarily, i acquired basics skills of video game designing and programming. Here is the link to my video game : <a href="https://youtu.be/zZXLvoesPe8" target="_blank">Rootie's Run</a><br><br>
-
-                Luckily, my school is giving lessons of <b>softskills</b> to it's students, in order to prevent them of the embarrassing situations that could happen in the professional working area, or simply in the real life.
-                I have learnt to work in team, how to manage my stress, my timetable, some angry people, and many other stuff, but also how to behave correctly and professionally from a situation to another.
-                
-            </p>
-        
-            <div class="skillsHeading reveal">
-
-                <p class="languagesName">DEVELOPING LANGUAGES I USE</p>
-                <p class="toolsName">TOOLS I USE</p>
-            
-
-            </div>
-
-            <div class="infoIcon reveal">
-                <div class="tools">
-                    <div class="devLanguages revealLeft">
-                        <div class="gridLanguages">
-    
-                            <img src="images/iconHTML.png" alt="HTML">
-                            <img src="images/iconCSS.png" alt="CSS">
-                            <img src="images/iconSASS.png" alt="SASS">
-                            <img src="images/iconJAVASCRIPT.png" alt="JAVASCRIPT">
-                            <img src="images/iconPYTHON.png" alt="PYTHON">
-                            <img src="images/iconPHP.png" alt="PHP">
-                            <img src="images/iconMYSQL.png" alt="MYSQL">
-                            <img src="images/iconJSON.png" alt="JSON">
-                        </div>
-                    </div>
-                    <p class="revealRight"><b>Photoshop</b> / <b>Illustrator</b> / <b>XD</b> / <b>Sony Vegas Pro</b> / <b>Lightroom</b> / <b>Visual Studio</b></p>
-                </div>
-            </div>
-        </section>
-
-
-
-        <!-- projects section -->
-
-        <section class="projects" id='projects'>
-            <h5 class="paragraph1 reveal">
-                <p class="el1">MY</p>
-                <p class="el2">PROJECTS</p>
-            </h5>
-
-
-            <!-- slider of all my projets-->
-            <div class="glide">
-                <div class="glide__track" data-glide-el="track">
-                  <ul class="glide__slides">
-
-                        <li class="glide__slide"><div id="container1" class="containers">
-                            <iframe src="https://www.youtube.com/embed/35ASrT2ur7Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            <p>An innovative map for the Saint-Quentin-En-Yvelines's website</p>
-                            <p>What was the project idea ?</p>
-                            <p>In this project that i did during the 2021's summer for the community's agglomeration of Saint-Quentin-En-Yvelines, the web-ingeneer that were supporting me asked me to propose an innovative way to demonstrate the progress of each city's construction site and works.
-                            It made me reflect so much time because their website is pretty complete and already had all the firsts ideas that i had in mind. Nevertheless i found a way to reinnovate this website by introducing an interactive map into it.
-                            I looked on the web what could i use to get it working, and in 5 weeks, i finished imaginating and coding this innovative item. Actually, i found out that a library called <i>MapBox</i> was doing exactly what i wanted.
-                            The first step, was to learn how to use this library, which was kinda complicated in less than 1 week if would still have enought time to code my project entirely. Then i started coding it, more or less quickly, and finished by present it to my tutor's boss. 
-                            He didn't understand how it worked because he didn't know much about web-development, but my mentor said that my work was really good and that he was satifyed of what i did.
-                            </p></div>
-                        </li>
-
-                        <li class="glide__slide"><div id="container2" class="containers">
-                            <iframe src="https://www.youtube.com/embed/YQ3bTsKf0cU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            <p>A Tour Eiffel website with a working blog and it's administration system</p>
-                            <p>What was the project idea ?</p>
-                            <p>This project was imposed to be done by my school if i wanna pursue my studies in the web-development axis. We had to make a full website with at least : a parallax animation, a live-error formulary, a working blog(with a wysiwyg interface, and a fully secured administration system), a gallery with filter and masonry effect, some comments under it with an anti-swearing, ... 
-                            This project was very formative, it allowed me to work by myself even if i didn't know how to do or anything, i learnt to study and search all by my side.
-                            </p></div>
-                        </li>
-
-                        <li class="glide__slide"><div id="container3" class="containers">
-                            <iframe src="https://www.youtube.com/embed/Wv6nLXiBxjg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            <p>A database printing with JSON</p>
-                            <p>What was the project idea ?</p>
-                            <p>During an upgrading skills week in JS, we asked our professor with one of my comrade something challenging that we've never worked on before, and he told us to make a website printing all the elements presents in a JSON file, with one page gathering the students, another gathering the professors, another for the direction, and finally another with the explanations of how we did it.</p>
-                            </div>
-                        </li>
-
-                        <li class="glide__slide"><div id="container4" class="containers">
-                            <iframe src="https://www.youtube.com/embed/RmdapwcArU0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            <p>A working e-commerce website for all my school's associations</p>
-                            <p>What is the project idea ?</p>
-                            <p>During my secondary year of studying web-development at the IIM, we will have to develop, with five of my comrades, a working e-commerce goodies website to allow the assosiations of our school to sell their goodies online to the rest of the world. For this, we will use Shopify as a back-end CMS, and Stripe to manage payments. At this time, we only started the project 2 weeks ago so we only did the wireframing and designing-system part, but i will update this page all over the year upcoming, so stay tuned if you want to see the final result ! :)</p>
-                            </div>
-                        </li>
-
-                        <li class="glide__slide"><div id="container5" class="containers">
-                            <iframe src="https://www.youtube.com/embed/kj68d2gTJ3I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            <p>My firsts projects at IIM</p>
-                            <p>What were the projects idea ?</p>
-                            <p>During my first year at IIM, i did many projects on many different aspects of the digital world, such as video game, web-marketing, web-development, creation and design, and 3D conception/animation. You will be able to find some of my projects by clicking this link : <a href="https://www.dropbox.com/sh/cewk3741fy3ebz9/AACx9KDEcRv_zIdGd1FNEDt1a?dl=0" target="_blank">see my dropbox project's file</a>, <a href="https://www.youtube.com/watch?v=zZXLvoesPe8" target="_blank">watch my video-game teaser</a>. </p>
-                            </div>
-                        </li>
-
-                    </ul>
-
-                </div>
-
-                <div class="glide__arrows" data-glide-el="controls">
-                    <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><</button>
-                    <button class="glide__arrow glide__arrow--right" data-glide-dir=">">></button>
-                </div>
-
-            </div>
-
-                
-        </div>
-
-        </section>
-
-
-
-
         <!-- contact section-->
-
-        <section class="contact reveal" id="contact">
-            <h6 class="paragraph1">
-                <p class="el1">NEED</p>
-                <p class="el2">A</p>
-                <p class="el3">DEVELOPER</p>
-                <p class="el4">?</p>
-                </h6>
+        <section class="contact" id="contact">
+            <h5 class="paragraph1">
+                <p class="el1">CONTACT</p>
+                <p class="el2">ME</p>
+            </h5>
             <div class="container">
                 <div class="gridContact">
                     <p class="el1 reveal2">L</p>
@@ -316,10 +101,10 @@
 
 
                         <div class="socialNetworks">
-                            <a href="https://www.instagram.com/flo.plvd/?hl=fr" target="_blank"><img src="images/logoINSTAGRAM.png" alt="logo Instagram"></a>
-                            <a href="https://www.linkedin.com/in/florian-palvadeau/" target="_blank"><img src="images/logoLINKEDIN.png" alt="logo LinkedIn"></a>
-                            <a href="https://github.com/FlorianPALVADEAU" target="_blank"><img src="images/logoGITHUB.png" alt="logo GitHub"></a>
-                            <a href="mailto:florian.plvd@gmail.com?subject=Message From Your PortFolio"><img src="images/logoGMAIL.png" alt="logo Gmail"></a>
+                            <a href="https://www.instagram.com/flo.plvd/?hl=fr" target="_blank"><img src="../images/logoINSTAGRAM.png" alt="logo Instagram"></a>
+                            <a href="https://www.linkedin.com/in/florian-palvadeau/" target="_blank"><img src="../images/logoLINKEDIN.png" alt="logo LinkedIn"></a>
+                            <a href="https://github.com/FlorianPALVADEAU" target="_blank"><img src="../images/logoGITHUB.png" alt="logo GitHub"></a>
+                            <a href="mailto:florian.plvd@gmail.com?subject=Message From Your PortFolio"><img src="../images/logoGMAIL.png" alt="logo Gmail"></a>
                             
                             
                         </div>
@@ -331,17 +116,24 @@
             </div>   
 
             
-            
+            <!-- Useless part, but cannot be deleted. -->
+            <!-- Map doesnt work without it -->
+            <div class="glide" style="visibility: hidden; display: none;">
+                <div class="glide__track" data-glide-el="track">
+                    <ul class="glide__slides">
+                        <li class="glide__slide">
+                            <div id="container1" class="containers"></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
             
 
         </section>
         <footer>Florian PALVADEAU | PortFolio</footer>
     </section>
-
-
-    <script src="https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js"></script>
-    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="../js/jquery-3.4.1.min.js"></script>
 </body>
 </html>
 
