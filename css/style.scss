@@ -13,6 +13,7 @@
     --text-color: black;
     --text-color-hover-or-lighter: rgb(73, 73, 73);
     --purple-color: rgb(122, 13, 122);
+    --second-color: rgb(79, 79, 226);
 }
 
 body{
@@ -83,12 +84,13 @@ body{
     opacity: 1;
 }
 .loader-wrapper {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
     background-image: url(/images/page-loader.png);
+    background-size: cover;
     filter:  grayscale(0.2);
     display: flex;
     justify-content: center;
@@ -184,7 +186,112 @@ body{
 // end of solo classes or Js adding/deleting classes
 
 
+// Start bubble animation
 
+    @keyframes bubbleAnimation {
+        0%{
+            transform: rotate(1deg);
+            
+        }
+        20%{
+            border-radius: 20px;
+        }
+        40%{
+            border-radius: 40px;
+        }
+        60%{
+            border-radius: 60px;
+        }
+        100%{
+            transform: rotate(500deg);
+            top: -15%;
+            border-radius: 1000px;
+        }
+    }
+
+    #bubbleAnimation{
+        z-index: -100000000;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        .bubble{
+            background-color: var(--second-color);
+            position: absolute;
+            opacity: 15%;
+            top: 110%;
+        }
+        :nth-child(1){
+            width: 80px;
+            height: 80px;
+            left: 5%;
+            animation: bubbleAnimation 4.5s infinite 0.5s ease-in-out;
+        }
+        :nth-child(2){
+            width: 100px;
+            height: 100px;
+            left: 90%;
+            animation: bubbleAnimation 5s infinite ease-in-out;
+        }
+        :nth-child(3){
+            width: 90px;
+            height: 90px;
+            left: 5%;
+            animation: bubbleAnimation 3.5s infinite 0.3s ease-in-out;
+        }
+        :nth-child(4){
+            width: 160px;
+            height: 160px;
+            left: 33%;
+            animation: bubbleAnimation 6.5s infinite 0.3s ease-in-out;
+        }
+        :nth-child(5){
+            width: 120px;
+            height: 120px;
+            left: 75%;
+            animation: bubbleAnimation 7s infinite 0.1s ease-in-out;
+        }
+        :nth-child(6){
+            width: 140px;
+            height: 140px;
+            left: 84%;
+            animation: bubbleAnimation 4s infinite 0.4s ease-in-out;
+        }
+        :nth-child(7){
+            width: 110px;
+            height: 110px;
+            left: 55%;
+            animation: bubbleAnimation 8s infinite 0.7s ease-in-out;
+        }
+        :nth-child(8){
+            width: 100px;
+            height: 100px;
+            left: 15%;
+            animation: bubbleAnimation 5s infinite 0.5s ease-in-out;
+        }
+        :nth-child(9){
+            width: 100px;
+            height: 100px;
+            left: 25%;
+            animation: bubbleAnimation 6s infinite 0.4s ease-in-out;
+        }
+        :nth-child(10){
+            width: 100px;
+            height: 100px;
+            left: 45%;
+            animation: bubbleAnimation 5s infinite 0.5s ease-in-out;
+        }
+        :nth-child(11){
+            width: 100px;
+            height: 100px;
+            left: 65%;
+            animation: bubbleAnimation 3.5s infinite 0.2s ease-in-out;
+        }
+    }
+// End bubble animation
 
 
 
@@ -197,7 +304,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--background-color);
+    background-color: transparent;
 
     .logo{
         font-weight: 300;
@@ -213,6 +320,7 @@ body{
             letter-spacing: 3px;
             font-weight: 350;
             text-decoration: underline;
+            color: var(--second-color);
         }
     }
  
@@ -234,8 +342,8 @@ body{
                 z-index: 100000000000;
                 width: 70px;
                 position: fixed;
-                top: 25px;
-                right: 30px;
+                top: 30px;
+                right: 45px;
                 cursor: pointer;
                 display: flex;
                 flex-direction: column;
@@ -243,7 +351,7 @@ body{
                     border-radius:10px;
                     height:7px;
                     margin: 7px 0;
-                    background-color: rgb(184, 184, 184);
+                    background-color: rgb(124, 124, 235);
                     transition: .4s  cubic-bezier(0.68, -0.6, 0.32, 1.6);
                 }
 
@@ -256,9 +364,6 @@ body{
                 .line-3{
                     width: 75%;
                 }
-
-
-
             }
 
             .lien {
@@ -287,7 +392,8 @@ body{
                         text-decoration: none;
                         font-size: 26px;
                         text-transform: uppercase;
-                        transition: 0.2s ease all;
+                        transition: 0.1s;
+
                     }
                     &:hover{
                         
@@ -295,13 +401,16 @@ body{
                         background-color: rgba($color: #e2e2e2, $alpha: 0.5);
                         width: 60vw;
                         cursor: pointer;
+                        li{
+                            color: black;
+                        }
                     }
                 }
                     
                 
                 :nth-child(2), :nth-child(4){
-                    border-left: 1px solid rgba($color: #e2e2e2, $alpha: 0.5);
-                    border-right: 1px solid rgba($color: #e2e2e2, $alpha: 0.5);
+                    border-left: 1px solid rgba($color: #ffffff, $alpha: 0.4);
+                    border-right: 1px solid rgba($color: #ffffff, $alpha: 0.4);
                 }
                 
                 :nth-child(1){
@@ -312,7 +421,7 @@ body{
                         opacity:0.5;
                         text-decoration: none;
                         li{
-                            background-color: rgba(0, 0, 0, 0.4);
+                            background-color: rgba(255, 255, 255, 0.6);
                             padding: 15px;
                             opacity: 1;
                         }
@@ -327,7 +436,7 @@ body{
                         opacity:0.5;
                         text-decoration: none;
                         li{
-                            background-color: rgba(0, 0, 0, 0.4);
+                            background-color: rgba(255, 255, 255, 0.6);
                             padding: 15px;
                             opacity: 1;
                         }
@@ -343,7 +452,7 @@ body{
                         opacity: 0.5;
                         text-decoration: none;
                         li{
-                            background-color: rgba(0, 0, 0, 0.4);
+                            background-color: rgba(255, 255, 255, 0.6);
                             padding: 15px;
                             opacity: 1;
                         }
@@ -357,7 +466,8 @@ body{
                         opacity: 0.5;
                         text-decoration: none;
                         li{
-                            background-color: rgba(0, 0, 0, 0.4);
+                            background-color: rgba(0, 0, 0, 0.6);
+                            color: white;
                             padding: 15px;
                             opacity: 1;
                         }
@@ -372,7 +482,7 @@ body{
                         opacity:0.5;
                         text-decoration: none;
                         li{
-                            background-color: rgba(0, 0, 0, 0.4);
+                            background-color: rgba(255, 255, 255, 0.6);
                             padding: 15px;
                             opacity: 1;
                         }
@@ -389,7 +499,7 @@ body{
             display: flex;
             justify-content: space-around;
             align-items: center;
-            background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+            background-color: rgb(175, 203, 255);
         }
     }
 
@@ -492,6 +602,9 @@ header{
                 cursor: pointer;
                 color: var(--text-color-hover-or-lighter);
             }
+            a{
+                color: var(--second-color);
+            }
         }
 
         .shortIntro{
@@ -521,6 +634,7 @@ header{
 
                 &:hover{
                     text-decoration: underline;
+                    color: var(--second-color);
                 }
             }
         }
@@ -619,6 +733,9 @@ header{
         font-size: 50px;
         line-height: 56px;
         width: 60vw;
+        a{
+            color: var(--second-color);
+        }
         
     }
     .paragraph3{
@@ -633,6 +750,7 @@ header{
             font-weight: 600;
             color: var(--text-color);
             text-decoration: none;
+            color: var(--second-color);
 
             &:hover{
                 text-decoration: underline;
@@ -783,6 +901,7 @@ header{
             font-weight: 600;
             color: var(--text-color);
             text-decoration: none;
+            color: var(--second-color);
 
             &:hover{
                 text-decoration: underline;
@@ -1203,7 +1322,7 @@ header{
                 color: white;
             }
             :nth-child(8){
-                color: var(--text-color);
+                color: var(--second-color);
             }
         }
 
@@ -1285,6 +1404,8 @@ footer{
 
 @media screen and (max-width: 600px) {
 
+
+
     .change .line-1 {
         transform-origin:bottom;
         transform:rotatez(45deg) translate(-1px,-10px)
@@ -1298,6 +1419,57 @@ footer{
         width:50%;
         transform: translate(18px,-16.25px) rotatez(45deg) scaleX(0.95);
     }
+
+    #bubbleAnimation{
+        .bubble{
+        }
+        :nth-child(1){
+            width: 40px;
+            height: 40px;
+        }
+        :nth-child(2){
+            width: 50px;
+            height: 50px;
+        }
+        :nth-child(3){
+            width: 45px;
+            height: 45px;
+        }
+        :nth-child(4){
+            width: 80px;
+            height: 80px;
+        }
+        :nth-child(5){
+            width: 60px;
+            height: 60px;
+        }
+        :nth-child(6){
+            width: 70px;
+            height: 70px;
+        }
+        :nth-child(7){
+            width: 55px;
+            height: 55px;
+        }
+        :nth-child(8){
+            width: 50px;
+            height: 50px;
+        }
+        :nth-child(9){
+            width: 50px;
+            height: 50px;
+        }
+        :nth-child(10){
+            width: 50px;
+            height: 50px;
+        }
+        :nth-child(11){
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+
 
 
     body{
@@ -1348,6 +1520,8 @@ footer{
                         
                     }
                     :nth-child(2), :nth-child(4){
+                        border-left: 0px;
+                        border-right: 0px;
                         border-top: 0.5px solid rgba(0, 0, 0, 0.4);
                         border-bottom: 0.5px solid rgba(0, 0, 0, 0.4);
                         width: 70vw;
@@ -1367,7 +1541,7 @@ footer{
                     height: 100vh;
                     border-radius: 0px;
                     border: 0px;
-                    background-color: rgba($color: #e2e2e2, $alpha: 1);
+                    background-color: rgb(175, 203, 255);
                     display: flex;
                     justify-content: space-around;
                     align-items: center;
@@ -1411,6 +1585,9 @@ footer{
                 font-size: 32px;
                 line-height: 34px;
                 width: 18ch;
+                a{
+                    color: var(--second-color);
+                }
             }
     
             .shortIntro{
@@ -1447,12 +1624,14 @@ footer{
             margin-bottom: 20vh;
             font-size: 5vw;
             width: 50vw;
+            
         } 
         .paragraphExperiences, .paragraph1-1{
             font-size: 20px;
             letter-spacing: 1px;
             margin-bottom: 1vh;
             width: 80vw;
+            
         }
         .paragraphExperiences{
             font-size: 18px;
@@ -1473,6 +1652,8 @@ footer{
             width: 80vw;
             letter-spacing: -1px;
             line-height: 20px;
+            background-color: rgba($color: #ffffff, $alpha: 0.4);
+            padding: 20px;
         }
         .gridAboutMe{
             margin-top: 0;
@@ -1526,6 +1707,8 @@ footer{
             letter-spacing: -1px;
             margin-bottom: 15vh;
             line-height: 18px;
+            background-color: rgba($color: #ffffff, $alpha: 0.4);
+            padding: 20px;
         }
     
         .skillsHeading{
@@ -1778,6 +1961,10 @@ footer{
                 margin-top: 65vh;
                 margin-bottom: 15px;
                 z-index: 100;
+                .adress{
+                    background-color: rgba($color: #ffffff, $alpha: 0.4);
+                    padding: 20px;
+                }
                 .socialNetworks{
                     width: 80vw;
                     margin-top: 10vh;
