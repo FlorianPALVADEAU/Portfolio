@@ -773,8 +773,8 @@ header{
 
 
         .pic{
-            filter: grayscale(0.8) ;
-            transition: 0.2s all ease-in-out;
+            filter: grayscale(0.8) blur(3px);
+            transition: 0.3s all ease-in-out;
 
             &:hover{
                 filter: grayscale(0);
@@ -1473,10 +1473,11 @@ footer{
 
 
     body{
-        overflow-x: hidden;
+        overflow-x:unset;
         width: 100vw;
     }
     .header{
+        overflow-x: hidden;
         width: 100vw;
     
         .logo{
@@ -1549,6 +1550,7 @@ footer{
             }
     }
     header{
+        overflow-x: hidden;
         .grid{
             grid-template-columns: 1fr 1fr 1fr;
             grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
@@ -1604,6 +1606,7 @@ footer{
         }
     }
     .aboutMe{
+        overflow-x: hidden;
         margin-top: 0vh;
     
         .presentation, .title2{
@@ -1661,6 +1664,9 @@ footer{
             height: 100vh;
             row-gap: 2px;
             column-gap: 2px;
+            .pic{
+                filter: blur(0px);
+            }
             .pic1{
                 width: 30vw;
                 background-size: 450%;
@@ -1694,6 +1700,7 @@ footer{
         }
     }
     .skills{
+        overflow-x: hidden;
         .paragraph1{
             margin-top: 10vh;
             margin-bottom: 20vh;
@@ -1755,6 +1762,7 @@ footer{
         }
     }
     .projects{
+        overflow-x: hidden;
         margin-top: 20vh;
         width: 90vw;
         
@@ -1840,6 +1848,7 @@ footer{
     
     
         .projectsCardContainer{
+            overflow-x: hidden;
             width: 80vw;
             grid-template-columns: 1fr;
             grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -1922,6 +1931,7 @@ footer{
 
 
     .contact{
+        overflow-x: hidden;
         margin-top: -15vh;
         .paragraph1{
             margin-top: 40vh;
@@ -1968,6 +1978,11 @@ footer{
                 .socialNetworks{
                     width: 80vw;
                     margin-top: 10vh;
+                    a{
+                        img{
+                            transform: scale(0.8);
+                        }
+                    }
                 }
             } 
         }

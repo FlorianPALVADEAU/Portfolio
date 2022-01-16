@@ -713,8 +713,8 @@ header .introducingMyself .projectsOrAbout a:hover {
   grid-auto-flow: dense;
 }
 .aboutMe .gridAboutMe .pic {
-  filter: grayscale(0.8);
-  transition: 0.2s all ease-in-out;
+  filter: grayscale(0.8) blur(3px);
+  transition: 0.3s all ease-in-out;
 }
 .aboutMe .gridAboutMe .pic:hover {
   filter: grayscale(0);
@@ -1298,11 +1298,12 @@ footer {
   }
 
   body {
-    overflow-x: hidden;
+    overflow-x: unset;
     width: 100vw;
   }
 
   .header {
+    overflow-x: hidden;
     width: 100vw;
   }
   .header .logo {
@@ -1366,6 +1367,9 @@ footer {
     flex-direction: column;
   }
 
+  header {
+    overflow-x: hidden;
+  }
   header .grid {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
@@ -1417,6 +1421,7 @@ footer {
   }
 
   .aboutMe {
+    overflow-x: hidden;
     margin-top: 0vh;
   }
   .aboutMe .presentation, .aboutMe .title2 {
@@ -1473,6 +1478,9 @@ footer {
     row-gap: 2px;
     column-gap: 2px;
   }
+  .aboutMe .gridAboutMe .pic {
+    filter: blur(0px);
+  }
   .aboutMe .gridAboutMe .pic1 {
     width: 30vw;
     background-size: 450%;
@@ -1504,6 +1512,9 @@ footer {
     background-size: 180%;
   }
 
+  .skills {
+    overflow-x: hidden;
+  }
   .skills .paragraph1 {
     margin-top: 10vh;
     margin-bottom: 20vh;
@@ -1556,6 +1567,7 @@ footer {
   }
 
   .projects {
+    overflow-x: hidden;
     margin-top: 20vh;
     width: 90vw;
   }
@@ -1630,6 +1642,7 @@ footer {
     background-color: var(--background-color);
   }
   .projects .projectsCardContainer {
+    overflow-x: hidden;
     width: 80vw;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -1700,6 +1713,7 @@ footer {
   }
 
   .contact {
+    overflow-x: hidden;
     margin-top: -15vh;
   }
   .contact .paragraph1 {
@@ -1747,6 +1761,9 @@ footer {
   .contact .container .contactInfos .socialNetworks {
     width: 80vw;
     margin-top: 10vh;
+  }
+  .contact .container .contactInfos .socialNetworks a img {
+    transform: scale(0.8);
   }
 
   .loader-wrapper {
